@@ -34,7 +34,7 @@ function spawnEnemies() {
     const color = `${Math.random() * 360}, 50%, 50%`;
 
     enemies.push(new Enemy(x, y, radius, color, 1, velocity));
-  }, 3000);
+  }, 1000);
 }
 spawnEnemies();
 
@@ -127,8 +127,8 @@ class Enemy extends Circle {
     this.velocity = velocity;
   }
   update() {
-    this.x = this.x - this.velocity.vx * 4;
-    this.y = this.y - this.velocity.vy * 4;
+    this.x = this.x - this.velocity.vx * 2;
+    this.y = this.y - this.velocity.vy * 2;
     this.draw();
   }
   getDistance(projectileX, projectileY) {
